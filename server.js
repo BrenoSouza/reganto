@@ -103,7 +103,37 @@ var SampleApp = function() {
         self.routes['/'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             //res.send(self.cache_get('index.html') );
-            res.sendfile('./producao/index.html', {root: './producao'});
+            self.app.set('/', __dirname + '/producao/html/');
+            self.app.use('/', express.static( __dirname + '/producao/html/' ));
+            res.sendfile('./producao/html/index.html');
+           
+        };
+
+        self.routes['/victor'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            //res.send(self.cache_get('index.html') );
+            self.app.set('/', __dirname + '/user-victor/html/');
+            self.app.use('/', express.static( __dirname + '/user-victor/html/' ));
+            res.sendfile('./user-victor/html/index.html');
+           
+        };
+
+        self.routes['/rafaela'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            //res.send(self.cache_get('index.html') );
+            self.app.set('/', __dirname + '/user-rafaela/html/');
+            self.app.use('/', express.static( __dirname + '/user-rafaela/html/' ));
+            res.sendfile('./user-rafaela/html/index.html');
+           
+        };
+
+        self.routes['/breno'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            //res.send(self.cache_get('index.html') );
+            self.app.set('/', __dirname + '/user-breno/html/');
+            self.app.use('/', express.static( __dirname + '/user-breno/html/' ));
+            res.sendfile('./user-breno/html/index.html');
+           
         };
     };
 
