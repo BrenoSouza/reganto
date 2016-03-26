@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1458969114
+#1458970875
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -13,6 +13,7 @@ images/prefeitura-sheet0.png
 images/arvore-sheet0.png
 images/game.png
 images/menu.png
+images/tiledbackground.png
 images/leftside-sheet0.png
 images/rightside-sheet0.png
 images/const-sheet0.png
