@@ -44,7 +44,7 @@ api.get('/', function (req, res) {
 		"coffee": ["Coffee", "Caff\u00e8", "Caf\u00e9", "Kaffee"],
 		"c2": ["Construct 2"]
 	}
-    res.send("{:666}");  
+    res.send(teste);  
 });
 
 // Seting static files path
