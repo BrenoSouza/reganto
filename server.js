@@ -3,6 +3,7 @@
 var express = require('express');
 var fs      = require('fs');
 var path = require('path');
+var xml = require('xml');
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
@@ -37,14 +38,18 @@ victor.get('/', function (req, res) {
 // Victor application.
 var api = express();  
 api.get('/', function (req, res) {
-	teste = {
-		"dog": ["Dog", "Cane", "Perro", "Hund", "Chien"],
-		"cat": ["Cat", "Gatto", "Gato", "Katze", "Chat"],
-		"flower": ["Flower", "Fiore", "Flor", "Blume", "Fleur"],
-		"coffee": ["Coffee", "Caff\u00e8", "Caf\u00e9", "Kaffee"],
-		"c2": ["Construct 2"]
-	}
-    res.send(teste);  
+	res.set('Content-Type', 'text/xml');
+	var example3 = [ { 
+		root: [ 
+			{ dog: 'cachorro' } , 
+			{ cat: 'gato' }, 
+			{ flower: 'fulor' } 
+		] 
+	} ];
+	teste = { dog: "cachorro" , cat: "gato"}
+		
+
+    res.send(xml(example3));  
 });
 
 // Seting static files path
