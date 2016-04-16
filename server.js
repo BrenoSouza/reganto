@@ -38,18 +38,51 @@ victor.get('/', function (req, res) {
 // Victor application.
 var api = express();  
 api.get('/', function (req, res) {
-	res.set('Content-Type', 'text/xml');
-	var example3 = [ { 
-		root: [ 
-			{ dog: 'cachorro' } , 
-			{ cat: 'gato' }, 
-			{ flower: 'fulor' } 
-		] 
-	} ];
-	teste = { dog: "cachorro" , cat: "gato"}
-		
+	// Permitindo acesso de outros sites
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+	
 
-    res.send(xml(example3));  
+	res.set('Content-Type', 'text/xml');
+	var eventos = [ 
+	/*{ 
+		/*root: [ 
+			{ nome: 'Gigantes do Samba' } , 
+			{ descricao: 'Show do Gigantes do Samba conta com apresentações de Alexandre Pires, Belo e Raça Negra.' }, 
+			{ pontuacao: '+300pts em Cultura' } 
+		],
+	},*/
+
+	{ 
+		root: [ 
+			{ evento1: [ 
+				{nome: 'Gigantes do Samba'}, 
+				{descricao: 'Show do Gigantes do Samba conta com apresentações de Alexandre Pires, Belo e Raça Negra.'}, 
+				{pontuacao: '+300pts em Diversão'} 
+			]} , 
+			{ evento2: [
+			 {nome: 'Natiruts'}, 
+			 {descricao: 'Natiruts lança DVD novo em show em Campina Grande.'}, 
+			 {pontuacao: '+300pts em Diversão'} 
+			 ]} , 
+			{ evento3: [ 
+				{nome: 'Doe Sangue'},
+				{descricao: 'Hemocentro de Campina Grande precisa de você'},
+				{pontuacao: '700pts em Saúde'} 
+			]} , 
+			{ evento4: [ 
+				{nome: 'Pizzaria Qualquer'},
+				{descricao: 'Peça sua pizza agora'},
+				{pontuacao: '250pts em Comércio'} 
+			]} , 
+		],
+	},
+
+
+	];
+		
+	res.send(xml(eventos));  
 });
 
 // Seting static files path
