@@ -46,35 +46,30 @@ api.get('/', function (req, res) {
 
 	res.set('Content-Type', 'text/xml');
 	var eventos = [ 
-	/*{ 
-		/*root: [ 
-			{ nome: 'Gigantes do Samba' } , 
-			{ descricao: 'Show do Gigantes do Samba conta com apresentações de Alexandre Pires, Belo e Raça Negra.' }, 
-			{ pontuacao: '+300pts em Cultura' } 
-		],
-	},*/
-
 	{ 
 		root: [ 
 			{ evento1: [ 
 				{nome: 'Gigantes do Samba'}, 
 				{descricao: 'Show do Gigantes do Samba conta com apresentações de Alexandre Pires, Belo e Raça Negra.'}, 
-				{pontuacao: '+300pts em Diversão'} 
-			]} , 
+				{pontuacao: '+300pts em Lazer'} 
+			]} ,
+
 			{ evento2: [
 			 {nome: 'Natiruts'}, 
 			 {descricao: 'Natiruts lança DVD novo em show em Campina Grande.'}, 
-			 {pontuacao: '+300pts em Diversão'} 
+			 {pontuacao: '+300pts em Lazer'} 
 			 ]} , 
+
 			{ evento3: [ 
 				{nome: 'Doe Sangue'},
 				{descricao: 'Hemocentro de Campina Grande precisa de você'},
-				{pontuacao: '700pts em Saúde'} 
-			]} , 
+				{pontuacao: '+700pts em Saúde'} 
+			]} ,
+
 			{ evento4: [ 
 				{nome: 'Pizzaria Qualquer'},
 				{descricao: 'Peça sua pizza agora'},
-				{pontuacao: '250pts em Comércio'} 
+				{pontuacao: '+250pts em Comércio'} 
 			]} , 
 		],
 	},
@@ -83,6 +78,41 @@ api.get('/', function (req, res) {
 	];
 		
 	res.send(xml(eventos));  
+});
+
+
+api.get('/codigo/:chave', function (req, res) {
+	res.set('Content-Type', 'text/xml');
+    var chaves = {
+    	'macaco-bolado': {'pts': '300', 'nome': 'EVENTO DO MACACO'}, 
+    	'chave-mestra':  {'pts': '200', 'nome': 'EVENTO MESTRE'} 
+    };
+ 	var check = chaves[req.params.chave];
+
+
+ 	
+
+
+ 	
+ 	if(check != undefined){
+ 		var modeloxml =
+ 		{ root: [ 
+ 			{ chave: req.params.chave},
+ 			{ pontuacao: check.pts},
+ 			{ nome: check.nome}],
+ 		};
+ 	}
+ 		
+ 	else{
+ 		var modeloxml =
+ 		{ root: [ 
+ 			{ chave: 'null'},
+ 			{ pontuacao: -1}],
+ 		};
+		res.send(xml(modeloxml));
+ 	}
+ 	
+ 	res.send(xml(modeloxml));
 });
 
 // Seting static files path
