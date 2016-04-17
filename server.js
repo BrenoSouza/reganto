@@ -82,6 +82,11 @@ api.get('/', function (req, res) {
 
 
 api.get('/codigo/:chave', function (req, res) {
+	// Permitindo acesso de outros sites
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+	
 	res.set('Content-Type', 'text/xml');
     var chaves = {
     	'macaco-bolado': {'pts': '300', 'nome': 'EVENTO DO MACACO'}, 
