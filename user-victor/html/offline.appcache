@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1460899430
+#1461506102
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -15,6 +15,7 @@ images/game.png
 images/tiledbackground.png
 images/menu-sheet0.png
 images/menu_notificacao-sheet0.png
+images/tiledbackground2.png
 images/leftside-sheet0.png
 images/rightside-sheet0.png
 images/const-sheet0.png
@@ -24,6 +25,7 @@ images/notificacao_fechar-sheet0.png
 images/esquerda_notificacao-sheet0.png
 images/direita_notificacao-sheet0.png
 images/send-sheet0.png
+images/com-sheet0.png
 images/moneybag-sheet0.png
 images/aceitacaobar-sheet0.png
 images/aceitacaosubbar-sheet0.png
@@ -37,5 +39,11 @@ icon-256.png
 loading-logo.png
 0.png
 1.png
+2.png
+3.png
+c2mp-net.js
+c2mp-peer.js
+c2mp.js
+waker.js
 NETWORK:
 *
