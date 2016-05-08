@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1462635898
+#1462669350
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -17,6 +17,8 @@ images/fabrica2-sheet0.png
 images/mercado2-sheet0.png
 images/hospital-sheet0.png
 images/parque2-sheet0.png
+images/mensagem-sheet0.png
+images/escola-sheet0.png
 images/menuingame-sheet0.png
 images/menu-sheet0.png
 images/game.png
@@ -51,6 +53,7 @@ loading-logo.png
 6.png
 7.png
 0.png
+8.png
 c2mp-net.js
 c2mp-peer.js
 c2mp.js
