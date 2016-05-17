@@ -1,9 +1,5 @@
 ﻿CACHE MANIFEST
-<<<<<<< HEAD
-#1463514258
-=======
-#1463521291
->>>>>>> 57b3db8734869ceb01d3ee9488a0b2c0929389f5
+#1463519746
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -60,7 +56,6 @@ images/sprite10-sheet0.png
 images/sprite200-sheet0.png
 images/sprite50-sheet0.png
 images/mover-sheet0.png
-images/mover-sheet1.png
 images/sprite-sheet0.png
 images/meni-sheet0.png
 images/inf-sheet0.png
