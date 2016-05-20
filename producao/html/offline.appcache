@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1463344098
+#1463519746
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -35,6 +35,26 @@ images/galeria-sheet0.png
 images/carafeliz-sheet0.png
 images/caratriste-sheet0.png
 images/menubar-sheet0.png
+images/sprite18-sheet0.png
+images/sprite19-sheet0.png
+images/sprite20-sheet0.png
+images/sprite21-sheet0.png
+images/sprite22-sheet0.png
+images/sprite23-sheet0.png
+images/sprite8-sheet0.png
+images/sprite9-sheet0.png
+images/sprite6-sheet0.png
+images/sprite7-sheet0.png
+images/sprite17-sheet0.png
+images/sprite15-sheet0.png
+images/sprite16-sheet0.png
+images/sprite13-sheet0.png
+images/sprite11-sheet0.png
+images/sprite12-sheet0.png
+images/sprite14-sheet0.png
+images/sprite10-sheet0.png
+images/sprite200-sheet0.png
+images/sprite50-sheet0.png
 images/mover-sheet0.png
 images/sprite-sheet0.png
 images/meni-sheet0.png
@@ -45,6 +65,7 @@ images/sprite3-sheet0.png
 images/notes-sheet0.png
 images/jogos-sheet0.png
 images/sprite5-sheet0.png
+images/sprite5-sheet1.png
 media/ting%20notification%20sound%20effect.ogg
 icon-16.png
 icon-32.png
