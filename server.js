@@ -51,25 +51,25 @@ api.get('/', function (req, res) {
 			{ evento1: [ 
 				{nome: 'Gigantes do Samba'}, 
 				{descricao: 'Show do Gigantes do Samba conta com apresentações de Alexandre Pires, Belo e Raça Negra.'}, 
-				{pontuacao: '+300pts em Lazer'} 
+				{pontuacao: '+Lazer'} 
 			]} ,
 
 			{ evento2: [
 			 {nome: 'Natiruts'}, 
 			 {descricao: 'Natiruts lança DVD novo em show em Campina Grande.'}, 
-			 {pontuacao: '+300pts em Lazer'} 
+			 {pontuacao: '+Lazer'} 
 			 ]} , 
 
 			{ evento3: [ 
 				{nome: 'Doe Sangue'},
 				{descricao: 'Hemocentro de Campina Grande precisa de você'},
-				{pontuacao: '+700pts em Saúde'} 
+				{pontuacao: '+Saúde'} 
 			]} ,
 
 			{ evento4: [ 
 				{nome: 'Pizzaria Qualquer'},
 				{descricao: 'Peça sua pizza agora'},
-				{pontuacao: '+250pts em Comércio'} 
+				{pontuacao: '+Comércio'} 
 			]} , 
 		],
 	},
@@ -90,7 +90,8 @@ api.get('/codigo/:chave', function (req, res) {
 	res.set('Content-Type', 'text/xml');
     var chaves = {
     	'macaco-bolado': {'pts': '300', 'nome': 'EVENTO DO MACACO'}, 
-    	'chave-mestra':  {'pts': '200', 'nome': 'EVENTO MESTRE'} 
+    	'chave-mestra':  {'pts': '200', 'nome': 'EVENTO MESTRE'},
+    	'6b2c7472497':  {'pts': '+Saúde', 'nome': 'EVENTO DO HEMOCENTRO'} 
     };
  	var check = chaves[req.params.chave];
 
