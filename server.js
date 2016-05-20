@@ -91,7 +91,7 @@ api.get('/codigo/:chave', function (req, res) {
     var chaves = {
     	'macaco-bolado': {'pts': '300', 'nome': 'EVENTO DO MACACO'}, 
     	'chave-mestra':  {'pts': '200', 'nome': 'EVENTO MESTRE'},
-    	'6b2c7472497':  {'pts': '+R$500', 'nome': 'EVENTO DO HEMOCENTRO'} 
+    	'6b2c7472497':  {'pts': '500', 'nome': 'EVENTO DO HEMOCENTRO'} 
     };
  	var check = chaves[req.params.chave];
 
