@@ -17,6 +17,10 @@ producao.get('/', function (req, res) {
   res.sendfile('./producao/html/index.html');
 });
 
+producao.get('/video', function (req, res) {  
+  res.redirect('https://www.youtube.com/watch?v=RSfD9_qUnFs');
+});
+
 // Breno application.
 var breno = express();  
 breno.get('/', function (req, res) {
